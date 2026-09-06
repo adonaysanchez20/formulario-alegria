@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La emoción de alegría</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="overlay" aria-hidden="true"></div>
+
+<div class="deco" aria-hidden="true">
+  <svg width="220" height="220" style="top:-60px; left:-60px; opacity:0.5;" viewBox="0 0 220 220">
+    <circle cx="110" cy="110" r="60" fill="none" stroke="#F5C518" stroke-width="2"/>
+    <g stroke="#F5C518" stroke-width="2">
+      <line x1="110" y1="10" x2="110" y2="30"/>
+      <line x1="110" y1="190" x2="110" y2="210"/>
+      <line x1="10" y1="110" x2="30" y2="110"/>
+      <line x1="190" y1="110" x2="210" y2="110"/>
+      <line x1="42" y1="42" x2="56" y2="56"/>
+      <line x1="164" y1="164" x2="178" y2="178"/>
+      <line x1="42" y1="178" x2="56" y2="164"/>
+      <line x1="164" y1="56" x2="178" y2="42"/>
+    </g>
+  </svg>
+  <svg width="180" height="180" style="bottom:-40px; right:-40px; opacity:0.45;" viewBox="0 0 180 180">
+    <path d="M20,90 Q45,40 90,60 Q135,80 160,30" fill="none" stroke="#2F80ED" stroke-width="3" stroke-linecap="round"/>
+    <path d="M15,130 Q50,90 90,110 Q130,130 165,90" fill="none" stroke="#F2994A" stroke-width="3" stroke-linecap="round"/>
+  </svg>
+  <svg width="140" height="140" style="top:12%; right:6%; opacity:0.5;" viewBox="0 0 140 140">
+    <circle cx="30" cy="30" r="7" fill="#F2994A"/>
+    <circle cx="70" cy="15" r="4" fill="#F5C518"/>
+    <circle cx="105" cy="45" r="9" fill="#2F80ED"/>
+    <circle cx="55" cy="70" r="5" fill="#A9D93C"/>
+    <circle cx="15" cy="95" r="6" fill="#F5C518"/>
+    <circle cx="110" cy="100" r="5" fill="#F2994A"/>
+  </svg>
+  <svg width="160" height="160" style="bottom:8%; left:4%; opacity:0.45;" viewBox="0 0 160 160">
+    <circle cx="120" cy="40" r="6" fill="#2F80ED"/>
+    <circle cx="90" cy="70" r="4" fill="#A9D93C"/>
+    <circle cx="140" cy="90" r="5" fill="#F5C518"/>
+    <circle cx="60" cy="30" r="5" fill="#F2994A"/>
+    <circle cx="30" cy="120" r="7" fill="#F5C518"/>
+  </svg>
+</div>
+
+<div class="sheet">
+
+  <form id="form-exposicion" novalidate>
+    <p class="eyebrow">La emoción de alegría</p>
+    <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:16px;">
+      <h1>La emoción<br>de alegría</h1>
+      <svg width="86" height="100" viewBox="0 0 86 100" style="flex-shrink:0; margin-top:4px;" aria-hidden="true">
+        <circle cx="43" cy="22" r="16" fill="#F5C518"/>
+        <path d="M35,18 Q38,14 41,18" stroke="#2E2515" stroke-width="2" stroke-linecap="round" fill="none"/>
+        <path d="M45,18 Q48,14 51,18" stroke="#2E2515" stroke-width="2" stroke-linecap="round" fill="none"/>
+        <path d="M35,26 Q43,34 51,26" stroke="#2E2515" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+        <path d="M43,38 L43,66" stroke="#F2994A" stroke-width="7" stroke-linecap="round"/>
+        <path d="M43,44 L20,26" stroke="#F2994A" stroke-width="6" stroke-linecap="round"/>
+        <path d="M43,44 L66,26" stroke="#F2994A" stroke-width="6" stroke-linecap="round"/>
+        <path d="M43,66 L24,92" stroke="#2F80ED" stroke-width="6" stroke-linecap="round"/>
+        <path d="M43,66 L62,92" stroke="#2F80ED" stroke-width="6" stroke-linecap="round"/>
+        <circle cx="14" cy="16" r="3" fill="#A9D93C"/>
+        <circle cx="74" cy="12" r="3" fill="#2F80ED"/>
+        <circle cx="78" cy="34" r="2.4" fill="#F5C518"/>
+      </svg>
+    </div>
+    <p class="intro">Tu opinión es muy importante para nosotros. Por favor, responde las siguientes preguntas marcando la opción que consideres adecuada.</p>
+
+    <div class="field" data-required>
+      <span class="num">01</span>
+      <div>
+        <label class="q">¿Cuál es tu nombre?</label>
+        <input type="text" name="nombre" placeholder="Nombre y apellido">
+        <p class="error">Escribe tu nombre.</p>
+      </div>
+    </div>
+
+    <div class="field" data-required data-type="email">
+      <span class="num">02</span>
+      <div>
+        <label class="q">¿Cuál es tu correo electrónico?</label>
+        <input type="email" name="correo" placeholder="nombre@correo.com">
+        <p class="error">Escribe un correo válido.</p>
+      </div>
+    </div>
+
+    <div class="field" data-required data-type="radio">
+      <span class="num">03</span>
+      <div>
+        <label class="q">Comunicación y expresión<br><span style="font-weight:400; color:var(--ink-muted); font-size:14px;">¿El equipo expositor se expresó con claridad, fluidez y buen dominio del tema?</span></label>
+        <div class="choices">
+          <label><input type="radio" name="comunicacion" value="si"><span>Sí</span></label>
+          <label><input type="radio" name="comunicacion" value="no"><span>No</span></label>
+        </div>
+        <p class="error">Elige una opción.</p>
+      </div>
+    </div>
+
+    <div class="field" data-required data-type="radio">
+      <span class="num">04</span>
+      <div>
+        <label class="q">Valores Franciscanos<br><span style="font-weight:400; color:var(--ink-muted); font-size:14px;">¿Durante la exposición se relacionó el tema con los valores franciscanos?</span></label>
+        <div class="choices">
+          <label><input type="radio" name="valores_franciscanos" value="si"><span>Sí</span></label>
+          <label><input type="radio" name="valores_franciscanos" value="no"><span>No</span></label>
+        </div>
+        <p class="error">Elige una opción.</p>
+      </div>
+    </div>
+
+    <div class="field" data-required data-type="radio">
+      <span class="num">05</span>
+      <div>
+        <label class="q">Juegos y dinámicas<br><span style="font-weight:400; color:var(--ink-muted); font-size:14px;">¿El juego o dinámica interactiva fue entretenido, participativo y estuvo bien organizado?</span></label>
+        <div class="choices">
+          <label><input type="radio" name="juegos_dinamicas" value="si"><span>Sí</span></label>
+          <label><input type="radio" name="juegos_dinamicas" value="no"><span>No</span></label>
+        </div>
+        <p class="error">Elige una opción.</p>
+      </div>
+    </div>
+
+    <div class="field" data-required data-type="radio">
+      <span class="num">06</span>
+      <div>
+        <label class="q">Calificación general<br><span style="font-weight:400; color:var(--ink-muted); font-size:14px;">¿Cómo calificarías nuestra exposición?</span></label>
+        <div class="stars">
+          <label class="star-option"><input type="radio" name="calificacion_general" value="5"><span class="star">★</span><span class="star-label">Excelente</span></label>
+          <label class="star-option"><input type="radio" name="calificacion_general" value="4"><span class="star">★</span><span class="star-label">Muy buena</span></label>
+          <label class="star-option"><input type="radio" name="calificacion_general" value="3"><span class="star">★</span><span class="star-label">Buena</span></label>
+          <label class="star-option"><input type="radio" name="calificacion_general" value="2"><span class="star">★</span><span class="star-label">Regular</span></label>
+          <label class="star-option"><input type="radio" name="calificacion_general" value="1"><span class="star">★</span><span class="star-label">Necesita mejorar</span></label>
+        </div>
+        <p class="error">Elige una calificación.</p>
+      </div>
+    </div>
+
+    <div class="field" data-required data-type="radio">
+      <span class="num">07</span>
+      <div>
+        <label class="q">Aprendizaje obtenido<br><span style="font-weight:400; color:var(--ink-muted); font-size:14px;">¿Consideras que aprendiste algo nuevo durante nuestra exposición?</span></label>
+        <div class="stars">
+          <label class="star-option"><input type="radio" name="aprendizaje" value="5"><span class="star">★</span><span class="star-label">Excelente</span></label>
+          <label class="star-option"><input type="radio" name="aprendizaje" value="4"><span class="star">★</span><span class="star-label">Muy buena</span></label>
+          <label class="star-option"><input type="radio" name="aprendizaje" value="3"><span class="star">★</span><span class="star-label">Buena</span></label>
+          <label class="star-option"><input type="radio" name="aprendizaje" value="2"><span class="star">★</span><span class="star-label">Regular</span></label>
+          <label class="star-option"><input type="radio" name="aprendizaje" value="1"><span class="star">★</span><span class="star-label">Necesita mejorar</span></label>
+        </div>
+        <p class="error">Elige una calificación.</p>
+      </div>
+    </div>
+
+    <div class="foot">
+      <p class="note">Tus respuestas son anónimas.</p>
+      <button type="submit">Enviar respuestas</button>
+    </div>
+  </form>
+
+  <div id="gracias">
+    <h2>Muchas gracias por su opinión</h2>
+    <p>"La alegría es una emoción que ilumina nuestro corazón, nos une a los demás y nos recuerda que cada momento puede convertirse en un hermoso motivo para sonreír."</p>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

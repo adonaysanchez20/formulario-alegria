@@ -1,0 +1,321 @@
+  :root{
+    --bg: #FFFDF5;
+    --panel: #FFFFFF;
+    --line: #E9E6D8;
+    --ink: #241F14;
+    --ink-muted: #8A8471;
+    --sun: #F5C518;
+    --coral: #F2994A;
+    --azul: #2F80ED;
+    --lima: #A9D93C;
+    --error: #E5484D;
+  }
+  *{box-sizing:border-box;}
+  html, body{ margin:0; }
+  body{
+    position:relative;
+    background-color:var(--bg);
+    background-image:url("alegria.jpeg");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    padding:64px 24px 96px;
+    overflow-x:hidden;
+  }
+
+  .overlay{
+    position:fixed;
+    inset:0;
+    z-index:0;
+    background:rgba(255,247,232,0.4);
+    pointer-events:none;
+  }
+
+  /* Decoración de fondo */
+  .deco{
+    position:fixed;
+    inset:0;
+    z-index:0;
+    pointer-events:none;
+    overflow:hidden;
+  }
+  .deco svg{ position:absolute; }
+
+  .sheet{
+    position:relative;
+    z-index:1;
+    max-width:600px;
+    margin:0 auto;
+    background:rgba(255,255,255,0.55);
+    -webkit-backdrop-filter:blur(10px);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.6);
+    border-radius:18px;
+    padding:56px 44px;
+    box-shadow:0 20px 60px rgba(46,37,21,0.10);
+  }
+  .eyebrow{
+    font-size:13px;
+    color:var(--coral);
+    font-weight:500;
+    letter-spacing:0.02em;
+    margin:0 0 8px;
+  }
+  h1{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:38px;
+    line-height:1.15;
+    margin:0 0 16px;
+    color:var(--ink);
+  }
+  .intro{
+    color:var(--ink-muted);
+    font-size:15px;
+    line-height:1.6;
+    margin:0 0 44px;
+    max-width:46ch;
+  }
+  .field{
+    border-top:1px solid var(--line);
+    padding:28px 0;
+    display:grid;
+    grid-template-columns:40px 1fr;
+    column-gap:16px;
+  }
+  .field:last-of-type{
+    border-bottom:1px solid var(--line);
+  }
+  .num{
+    font-family:'Fraunces', serif;
+    font-size:15px;
+    color:var(--azul);
+    padding-top:2px;
+  }
+  label.q{
+    display:block;
+    font-size:16px;
+    margin:0 0 14px;
+    color:var(--ink);
+    line-height:1.4;
+  }
+  input[type="text"], input[type="email"], textarea{
+    width:100%;
+    background:transparent;
+    border:none;
+    border-bottom:1px solid var(--line);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    font-size:15px;
+    padding:8px 0;
+    outline:none;
+    transition:border-color .15s ease;
+  }
+  input[type="text"]:focus, input[type="email"]:focus, textarea:focus{
+    border-color:var(--sun);
+  }
+  textarea{
+    resize:vertical;
+    min-height:64px;
+    line-height:1.5;
+  }
+  ::placeholder{
+    color:#B7A984;
+  }
+  .scale{
+    display:flex;
+    gap:10px;
+  }
+  .scale input{ display:none; }
+  .scale span{
+    width:40px;
+    height:40px;
+    border:1px solid var(--line);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:14px;
+    color:var(--ink-muted);
+    cursor:pointer;
+    transition:all .15s ease;
+  }
+  .scale input:checked + span{
+    border-color:var(--sun);
+    color:#8A5A0E;
+    background:rgba(244,169,59,0.18);
+  }
+  .choices{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+  }
+  .choices input{ display:none; }
+  .choices span{
+    padding:9px 18px;
+    border:1px solid var(--line);
+    border-radius:20px;
+    font-size:14px;
+    color:var(--ink-muted);
+    cursor:pointer;
+    transition:all .15s ease;
+  }
+  .choices input:checked + span{
+    border-color:var(--lima);
+    color:#5B7A16;
+    background:rgba(169,217,60,0.20);
+  }
+  .stars{
+    display:flex;
+    justify-content:space-between;
+    gap:6px;
+  }
+  .stars input{ display:none; }
+  .star-option{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:6px;
+    cursor:pointer;
+    flex:1;
+  }
+  .star-option .star{
+    font-size:30px;
+    line-height:1;
+    color:var(--line);
+    transition:color .15s ease, transform .1s ease;
+  }
+  .star-option:hover .star{
+    color:#F0DE9A;
+  }
+  .star-option input:checked + .star{
+    color:var(--sun);
+  }
+  .star-label{
+    font-size:11px;
+    color:var(--ink-muted);
+    text-align:center;
+    line-height:1.25;
+    max-width:64px;
+  }
+  .foot{
+    margin-top:40px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+  }
+  .note{
+    font-size:13px;
+    color:var(--ink-muted);
+  }
+  button{
+    background:var(--coral);
+    color:#FFF7E8;
+    border:none;
+    font-family:'Inter', sans-serif;
+    font-weight:500;
+    font-size:15px;
+    padding:14px 28px;
+    border-radius:24px;
+    cursor:pointer;
+    transition:background .15s ease;
+    white-space:nowrap;
+  }
+  button:hover{
+    background:#D2573D;
+  }
+  .error{
+    color:var(--error);
+    font-size:13px;
+    margin-top:8px;
+    display:none;
+  }
+  .field.has-error .error{ display:block; }
+  .field.has-error input[type="text"],
+  .field.has-error input[type="email"],
+  .field.has-error textarea{
+    border-color:var(--error);
+  }
+  #gracias{
+    display:none;
+    text-align:center;
+    padding:80px 0;
+  }
+  #gracias h2{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size:28px;
+    margin:0 0 12px;
+  }
+  #gracias p{
+    color:var(--ink-muted);
+    font-style:italic;
+    font-size:16px;
+    line-height:1.6;
+    max-width:44ch;
+    margin:0 auto;
+  }
+
+  @media (max-width: 640px){
+    body{
+      padding:32px 12px 64px;
+    }
+    .sheet{
+      padding:32px 22px;
+      border-radius:14px;
+    }
+    h1{
+      font-size:28px;
+    }
+    .intro{
+      margin-bottom:32px;
+    }
+    .field{
+      grid-template-columns:28px 1fr;
+      column-gap:10px;
+      padding:22px 0;
+    }
+    .num{
+      font-size:13px;
+    }
+    label.q{
+      font-size:15px;
+    }
+    .scale{
+      justify-content:space-between;
+    }
+    .scale span{
+      width:36px;
+      height:36px;
+      font-size:13px;
+    }
+    .choices span{
+      padding:8px 14px;
+      font-size:13px;
+    }
+    .star-option .star{
+      font-size:22px;
+    }
+    .star-label{
+      font-size:9px;
+      max-width:44px;
+    }
+    .foot{
+      flex-direction:column;
+      align-items:stretch;
+      gap:14px;
+    }
+    .foot button{
+      width:100%;
+    }
+    .foot .note{
+      order:2;
+      text-align:center;
+    }
+    .deco svg{
+      transform:scale(0.6);
+    }
+  }
